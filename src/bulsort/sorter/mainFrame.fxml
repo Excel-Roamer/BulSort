@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="740.0" stylesheets="@../resources/styles/custom.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bulsort.sorter.MainController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <center>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" spacing="12.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                     <children>
+                        <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" hgap="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="addBuls" minHeight="36.0" mnemonicParsing="false" text="%ADD_BULLETINS" textAlignment="CENTER" wrapText="true">
+                                 <padding>
+                                    <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                                 </padding>
+                                 <graphic>
+                                    <Label fx:id="addBulsIcon" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="12.0" top="12.0" />
+                           </padding>
+                        </FlowPane>
+                        <Button fx:id="sort" minHeight="36.0" mnemonicParsing="false" text="%PROCESS">
+                           <padding>
+                              <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <Label fx:id="sortIcon" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <ScrollPane fx:id="sp" fitToWidth="true" focusTraversable="false" prefHeight="254.0" prefWidth="600.0" styleClass="main-vbox" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <content>
+                        <VBox fx:id="list" spacing="12.0" styleClass="main-vbox">
+                           <children>
+                              <TitledPane fx:id="titP1A" text="%1A" visible="false">
+                                 <content>
+                                    <TilePane fx:id="lst1A" hgap="10.0" vgap="10.0" />
+                                 </content>
+                                 <padding>
+                                    <Insets bottom="6.0" top="6.0" />
+                                 </padding>
+                              </TitledPane>
+                              <TitledPane fx:id="titP2A" layoutX="10.0" layoutY="10.0" text="%2A" visible="false">
+                                 <content>
+                                    <TilePane fx:id="lst2A" hgap="10.0" vgap="10.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="titP3A" layoutX="10.0" layoutY="10.0" text="%3A" visible="false">
+                                 <content>
+                                    <TilePane fx:id="lst3A" hgap="10.0" vgap="10.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="titPTC" layoutX="10.0" layoutY="68.0" text="%TC" visible="false">
+                                 <content>
+                                    <TilePane fx:id="lstTC" hgap="10.0" vgap="10.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="titP1B" layoutX="10.0" layoutY="126.0" text="%1B" visible="false">
+                                 <content>
+                                    <TilePane fx:id="lst1B" hgap="10.0" vgap="10.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="titP2B" layoutX="10.0" layoutY="184.0" text="%2B" visible="false">
+                                 <content>
+                                    <TilePane fx:id="lst2B" hgap="10.0" vgap="10.0" />
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </VBox>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu fx:id="fileMenu" mnemonicParsing="false" text="%FILE_MENU">
+                     <items>
+                        <MenuItem fx:id="quit" mnemonicParsing="false" text="%QUIT">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </Menu>
+                  <Menu fx:id="operMenu" mnemonicParsing="false" text="%OPERATIONS_MENU">
+                     <items>
+                        <MenuItem fx:id="addBulMenu" mnemonicParsing="false" text="%ADD_BULLETINS">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="addPVMenu" mnemonicParsing="false" text="%ADD_PVS">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="resetMenu" mnemonicParsing="false" text="%RESET">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="newDBMenu" mnemonicParsing="false" text="%CHOOSE_ANOTHER_DB">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="P" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </Menu>
+                  <Menu fx:id="optiMenu" mnemonicParsing="false" text="%OPTIONS_MENU">
+                     <items>
+                        <MenuItem fx:id="destMenu" mnemonicParsing="false" text="%DESTINATION_DIR">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <CheckMenuItem fx:id="sortMenu" mnemonicParsing="false" text="%SORT_BULLETINS">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </CheckMenuItem>
+                        <Menu mnemonicParsing="false" text="%DUPLICATE_PAGES">
+                          <items>
+                              <RadioMenuItem fx:id="assDupMenu" mnemonicParsing="false" text="%ASSEMBLED_COPIES">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="DUPLICATE" />
+                                 </toggleGroup>
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="DIGIT2" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="disDupMenu" mnemonicParsing="false" text="%DISASSEMBLED_COPIES" toggleGroup="$DUPLICATE">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="DIGIT1" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                              <RadioMenuItem fx:id="noDupMenu" mnemonicParsing="false" text="%NO_DUPLICATE" toggleGroup="$DUPLICATE">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator>
+                              </RadioMenuItem>
+                          </items>
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </Menu>
+                        <CheckMenuItem fx:id="delMenu" mnemonicParsing="false" text="%DELETE_WATERMARKS">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="G" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </CheckMenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="supMenu" mnemonicParsing="false" text="%SUP_OPTIONS">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="P" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </Menu>
+                  <Menu fx:id="aboutMenu" mnemonicParsing="false" text="%INTERROGATION_MARK_MENU">
+                     <items>
+                        <MenuItem fx:id="about" mnemonicParsing="false" text="%ABOUT">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <FlowPane BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="genInfos" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </FlowPane>
+         </bottom>
+      </BorderPane>
+      <FlowPane fx:id="overlay" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.0" style="-fx-background-color: black;">
+         <children>
+            <ProgressIndicator fx:id="loading" maxHeight="100.0" maxWidth="100.0" opacity="0.0" />
+         </children>
+      </FlowPane>
+   </children>
+</StackPane>

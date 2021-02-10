@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="480.0" minWidth="480.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bulsort.sorter.about.AboutController">
+   <children>
+      <FlowPane id="header" alignment="CENTER_LEFT" hgap="8.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="8.0" left="12.0" right="8.0" top="8.0" />
+         </padding>
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/64x64.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="appName" text="title">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+      <VBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Bulsort is published under GNU General Public License. i.e. It's a free software; you can redistribute it and/or modify it (with Classpath exception)..." wrapText="true">
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="22.0" layoutY="55.0" text="Build informations:" wrapText="true" />
+            <Label fx:id="buildInfos" layoutX="22.0" layoutY="116.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Version: %version%&#10;Date: %date%&#10;Java Version: 1.8.0_171-b11, Oracle Corporation&#10;PDFBox Version: 2.0.20, Apache Software Foundation&#10;POI Version: 3.15, Apache Software Foundation&#10;XmlBeans version: 2.6.0-r1364789, Apache Software Foundation&#10;Commons Logging Version: 1.2.0, Apache Software Foundation&#10;FontBox Version: 2.0.20, Apache Software Foundation&#10;Commons Collections Verion: 4.1, Apache Software Foundation&#10;SQLite JDBC library Version: 3.16.1&#10;ICU4J Version: 64.2, Unicode, Inc." wrapText="true" />
+            <Label layoutX="22.0" layoutY="78.0" text="Author: H. KASSIMI (hafid.kassimi@mdrassty.net)">
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@about.css" />
+   </stylesheets>
+</VBox>
