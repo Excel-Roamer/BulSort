@@ -15,7 +15,7 @@ Java 8
 + **XmlBeans** version: 2.6.0-r1364789, Apache Software Foundation
 + **Commons Logging** version: 1.2.0, Apache Software Foundation
 + **FontBox** version: 2.0.20, Apache Software Foundation
-+ **Commons Collections** verion: 4.1, Apache Software Foundation
++ **Commons Collections** version: 4.1, Apache Software Foundation
 + **SQLite JDBC library** version: 3.16.1
 + **ICU4J** version: 64.2, Unicode, Inc.
 ## Setup
