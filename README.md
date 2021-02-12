@@ -19,7 +19,7 @@ Java 8
 + **SQLite JDBC library** version: 3.16.1
 + **ICU4J** version: 64.2, Unicode, Inc.
 ## Setup
-_**Windows exe**_: [BulSort-2.0.0.exe (32 bits)](https://sourceforge.net/projects/bulsort/)
+_**Windows exe**_: [https://sourceforge.net/projects/bulsort/](https://sourceforge.net/projects/bulsort/)
 
 ## Launch
 1. input your school database.
